@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jjongdevreqresproducts 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jjongdevreqresproducts
+  template:
+    metadata:
+      labels:
+        app: jjongdevreqresproducts 
+    spec:
+      containers:
+        - name: jjongdevreqresproducts 
+          image: user1515acr.azurecr.io/jjongdevreqresproducts
+          ports:
+          - containerPort: 8080
